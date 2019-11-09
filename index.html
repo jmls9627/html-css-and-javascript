@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title> Github Hub </title>
+   <link rel="stylesheet" href="css/site.css"> 
+  
+  
+  
+ 
+
+
+
+
+
+</head>
+   <body>
+        <div class="container">
+  <header>
+        <nav>
+                <ul>
+                 <li>  <a href="/index.html">Home</a>      </li>
+                 <li>  <a href="/contact.html">Contact</a>   </li>
+                 <li>  <a href="/about.html">About</a>    </li>
+                </ul>
+             </nav>  
+    <div>
+    <h1><img src="image/im1.png" class="bordered-image"/></h1>
+      <p>This is a sample site to search Github for interesting projects.</p>
+    </div>
+    
+</header>
+
+   <section id="main">  
+     <p>In this <em>sample site</em>we'll show a list of <a href="http://github.com">GitHub</a>
+        projects and data about <strong>those projects</strong>.</p>
+   
+   <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
+    <label for="searchPhrase">Search Phrase:</label> 
+    <input name="searchPhrase" id="searchPhrase"/> 
+     
+     
+     <input type="checkbox" name="userStars" id="userStars" checked="true"/>
+     <label for="userStars">Use Stars?</label>  
+    
+    
+     <label for="langChoice">Language:</label> 
+      <select name="langChoice" id="langChoice"> 
+       <option selected>All</option>
+       <option value="js">JavaScript</option>
+       <option value="C#">C#</option>
+       <option value="java">Java</option>
+       <option value="Ruby">Ruby</option>
+    </select><br><br>
+    <input type="submit" value="search"> 
+</form>
+
+<div id="results" class="bordered-image">
+this is where results wil live... eventually
+</div>   
+
+</section>
+
+
+
+   <footer>
+       &copy; 2014 Shawn Wildermuth LLC.
+   </footer>
+ </div>
+
+ <script type="text/javascript" src="js/index.js"></script>
+
+
+</body>
+</html>
