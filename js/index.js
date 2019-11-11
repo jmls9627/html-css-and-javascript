@@ -32,3 +32,32 @@ console.log("none is undefined ");
 if(aNumber == 10) {
     console.log("10 is 10"); 
         }
+ 
+ //function showMsg(msg) {
+ //console.log("show messesage: " + msg );
+ //}
+ 
+ function  showMsg(msg, more){
+ if(more){
+    console.log("show messesage: " + msg + more);
+ } else{
+    console.log("show messesage: " + msg);
+   }
+ }
+
+ showMsg("some information");
+ showMsg("some information", "and even more");
+
+ var showit= function(msg){
+     console.log(msg);
+ }
+ showit("some message");
+
+ function showitthen(msg,callback){
+     showit(msg);
+     callback();
+ }
+
+ showitthen("showitthen called", function(){
+     console.log("callback called");
+ });
