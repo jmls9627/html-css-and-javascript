@@ -5,17 +5,74 @@ index.js
 "use strict"; 
 
 var msg= "hello javascript";
- alert(msg);
+// alert(msg);
 console.log(msg);
 
 var resultsDiv= document.getElementById("results");
 resultsDiv.innerHTML= "<p> this is from js</p>";
+ /*
+var result ={
+name:"Jquery",
+language:"javaScript",
+score: 4.5,
+showLog:function(){
 
+},
+owner:{
+    login:"shawn Wlildermuth",
+    id:123456,
+  }
+};
+
+result.phoneNumber= "123-456-7890";
+console.log(result.phoneNumber);
+console.log(result.name);
+*/
+
+
+//
+var results=[{
+    name:"Jquery",
+    language:"javaScript",
+    score: 4.5,
+    showLog:function(){
+    
+    },
+    owner:{
+        login:"shawn Wlildermuth",
+        id:123456
+      }
+    }, {
+        name:"JQuery UI",
+        language:"javaScript",
+        score:3.9 ,
+        showLog:function(){
+        
+        },
+        owner:{
+            login:"shawnWlildermuth",
+            id:123456
+          }
+        }];
+
+console.log(results.length);
+console.log(results[0].name);
+
+
+
+/*
+results.push(result);
+results.push({name:"dummy proyect"});
+*/
+
+
+
+/*
 console.log("msg is " + typeof(msg));
 console.log("resultDiv is" + typeof(resultsDiv));
 
 var none;
-console.log("none is " + typeof(none));
+console.log("noe is " + typeof(none));
 
 var aNumber= 10;
 console.log("aNumber is " + typeof(aNumber));
@@ -23,7 +80,7 @@ console.log("aNumber is " + typeof(aNumber));
 var truefalse= true;
 console.log("truefalse is " + typeof(truefalse));
 
-/*msgs = "this shouldn't work";*/ 
+msgs = "this shouldn't work"; 
 
 if(none == undefined) {
 console.log("none is undefined "); 
@@ -61,3 +118,23 @@ if(aNumber == 10) {
  showitthen("showitthen called", function(){
      console.log("callback called");
  });
+
+
+ var inglobal=true;
+ 
+ function testme(){
+     console.log("testme(): " + inglobal);
+
+     var somemsg = "Some Message";
+     console.log("testMe(): " + somemsg);
+
+     showitthen("With closure", function(){
+         showit("testme with cosure(): " + somemsg);
+     })
+
+
+ }
+        
+// console.log("global: " + somemsg); 
+
+ testme(); */
