@@ -4,12 +4,12 @@ index.js
 
 "use strict"; 
 
-var msg= "hello javascript";
+//var msg= "hello javascript";
 // alert(msg);
-console.log(msg);
+//console.log(msg);
 
-var resultsDiv= document.getElementById("results");
-resultsDiv.innerHTML= "<p> this is from js</p>";
+//var resultsDiv= document.getElementById("results");
+//resultsDiv.innerHTML= "<p> this is from js</p>";
  /*
 var result ={
 name:"Jquery",
@@ -29,8 +29,10 @@ console.log(result.phoneNumber);
 console.log(result.name);
 */
 
+var resultList=jQuery("#resultList");
+resultList.text("this is from jquery");
 
-//
+/*
 var results=[{
     name:"Jquery",
     language:"javaScript",
@@ -55,8 +57,17 @@ var results=[{
           }
         }];
 
-console.log(results.length);
-console.log(results[0].name);
+for(var i=0; i<results.length ; i++){
+var result=results[i];
+if(result.score > 4)
+continue
+console.log(result.name);
+
+}
+
+
+//console.log(results.length);
+//console.log(results[0].name);
 
 
 
