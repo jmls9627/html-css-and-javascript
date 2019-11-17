@@ -1,12 +1,34 @@
 /* 
 index.js
 */
+function test(){
+   var resultList=$('#resultList');
+    resultList.text("hola");
+    
+}
 
 "use strict"; 
+/*
+function test(){
+   var resultList=$('#resultList');
+    resultList.text("hola");
+    
+}
+*/
 
 //var msg= "hello javascript";
-// alert(msg);
+//alert(msg);
 //console.log(msg);
+
+
+
+var resultList=$('#resultList');
+//resultList.text("this is from jquery");
+console.log(resultList.text("hola esto es desde el jquery"));
+//$('resultList').text("hola");
+
+
+
 
 //var resultsDiv= document.getElementById("results");
 //resultsDiv.innerHTML= "<p> this is from js</p>";
@@ -29,8 +51,7 @@ console.log(result.phoneNumber);
 console.log(result.name);
 */
 
-var resultList=jQuery("#resultList");
-resultList.text("this is from jquery");
+
 
 /*
 var results=[{

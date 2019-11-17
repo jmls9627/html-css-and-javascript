@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
 <head>
    <title> Github Hub </title>
    <link rel="stylesheet" href="css/site.css"> 
@@ -38,6 +39,7 @@
     
      <label for="langChoice">Language:</label> 
       <select name="langChoice" id="langChoice"> 
+     
        <option selected>All</option>
        <option value="js">JavaScript</option>
        <option value="C#">C#</option>
@@ -46,6 +48,8 @@
     </select><br><br>
     <input type="submit" value="search"> 
 </form>
+
+<button onclick="test()">123</button>
 
 <div id="results" class="bordered-image">
 <div id="resultList">this is were results will go</div>
@@ -60,8 +64,8 @@
    </footer>
  </div>
 
-<script type="text/javascript" src="js/index.js"></script>
 
-<script type="text/javascript" src=""></script>
+
+
 </body>
 </html>
