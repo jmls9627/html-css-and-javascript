@@ -1,34 +1,73 @@
 /* 
 index.js
 */
-function test(){
-   var resultList=$('#resultList');
-    resultList.text("hola");
-    
-}
 
+$(document).ready(function(){
 "use strict"; 
+
+//console.log($("#resultList").text("jasdjasdaksxm"));
+var rs=$('#resultList');
+console.log(rs.text("dime que ya..."));
+   
+
+var toggleButton=$("#toggleButton");
+
+toggleButton.on("click",function(){
+
+    rs.toggle(500);
+  
+if(toggleButton.text()=="Hide") toggleButton.text("Show");
+   else
+    toggleButton.text("Hide");
+   
+ });
+
+var listitems=$("header nav li");
+listitems.css("font-weight","bold");
+//listitems.css("font-size","18px");
+listitems.filter(":first").css("font-size","35px");
+
+//$("header nav li").text("testing jquery");
+// $("header nav li").css("font-weight","bold");
+
+
+
 /*
-function test(){
-   var resultList=$('#resultList');
-    resultList.text("hola");
-    
-}
-*/
+function Hide(){
+    var rs=$('#resultList');
+    var toggleButton=$("#toggleButton");
+    rs.toggle(500);
+    if(toggleButton.text()=="Hide") 
+    toggleButton.text("Show");
+   else
+    toggleButton.text("Hide");
+}*/
+var resultList=$('#resultList');
+
+function test0(){
+    var resultList=$('#resultList');
+     console.log(resultList.text("this is from jq test0"));
+     
+ }
+ function test1(){
+    var resultList=$('#resultList');
+     console.log(resultList.text("this is from jq test1"));
+     
+ }
+ function test2(){
+    var resultList=$('#resultList');
+     console.log(resultList.text("this is from jq test2"));
+     
+ }
+ function test3(){
+    var resultList=$('#resultList');
+     console.log(resultList.text("this is from jq test3"));
+     
+ }
 
 //var msg= "hello javascript";
 //alert(msg);
 //console.log(msg);
-
-
-
-var resultList=$('#resultList');
-//resultList.text("this is from jquery");
-console.log(resultList.text("hola esto es desde el jquery"));
-//$('resultList').text("hola");
-
-
-
 
 //var resultsDiv= document.getElementById("results");
 //resultsDiv.innerHTML= "<p> this is from js</p>";
@@ -53,7 +92,7 @@ console.log(result.name);
 
 
 
-/*
+
 var results=[{
     name:"Jquery",
     language:"javaScript",
@@ -78,6 +117,20 @@ var results=[{
           }
         }];
 
+resultList.empty();
+$.each(results,function(i,item){
+var newResult="<div class='resullt'>"+
+"<div class='title'>"+ item.name +"</div>"+
+"<div> Language: "+ item.language +"</div>"+
+"<div> Owner: "+ item.owner.login +"</div>"+
+"</div>";
+resultList.append(newResult);
+});
+
+
+
+
+/*
 for(var i=0; i<results.length ; i++){
 var result=results[i];
 if(result.score > 4)
@@ -170,3 +223,5 @@ if(aNumber == 10) {
 // console.log("global: " + somemsg); 
 
  testme(); */
+
+});
