@@ -90,9 +90,78 @@ console.log(result.phoneNumber);
 console.log(result.name);
 */
 
+$("#githubsearchform").on("submit",function() {
+    var searchPhrase=$("#searchPhrase").val();
+    var useStars=$("#useStars").val();
+    var langChoice=$("#langChoice").val();
+    
+    if(searchPhrase){
 
+        resultList.text("performing prhase...");
+       
+        var githubsearch="http://api.github.com/search/repositories?q=" + encodeURIComponent(searchPhrase);
 
+        if(langChoice != "All"){
+            githubsearch += "+language:" + encodeURIComponent(langChoice);
+      }
+   
+      if(useStars){
+        githubsearch += "&sort=stars";
+  } 
 
+    $.get(githubsearch,function(r){
+        //console.log(r.items.length)
+    displayResults(r.items);
+    });
+     }
+    return false;  
+});
+
+/*
+$("#githubsearchform").on("submit",function() {
+    var searchPhrase=$("#searchPhrase").val();
+    var useStars=$("#useStars").val();
+    var langChoice=$("#langChoice").val();
+
+if(searchPhrase){
+
+    resultList.text("performing prhase...")
+
+    var githubsearch="http://api.github.com/search/repositories?q=" + searchPhrase;
+
+    if(langChoice!="All"){
+      githubsearch += "+language:" + langChoice;
+}
+    if(useStars){
+      githubsearch += "&sort=stars" + langChoice;
+} 
+
+var githubsearch="http://api.github.com/search/repositories?q=jquery+language:javascript&sort=stars";
+
+$.get(githubsearch,function(r){
+    //console.log(r.items.length)
+displayResults(r.items);
+});
+}
+return false;
+
+});
+*/
+/*
+$.get(githubsearch)
+.success(function(r){
+    //console.log(r.items.length)
+displayResults(r.items);
+})
+.fail(function(err){
+    console.log("failed to query Github");
+})
+.done(function() {
+    //
+});
+*/
+
+/*
 var results=[{
     name:"Jquery",
     language:"javaScript",
@@ -116,16 +185,28 @@ var results=[{
             id:123456
           }
         }];
-
+*/
+function displayResults(results) {
+    
 resultList.empty();
 $.each(results,function(i,item){
-var newResult="<div class='resullt'>"+
-"<div class='title'>"+ item.name +"</div>"+
+
+var newResult=$("<div class='result'>"+
+"<div class='title'>"+ item.name + "</div>"+
 "<div> Language: "+ item.language +"</div>"+
 "<div> Owner: "+ item.owner.login +"</div>"+
-"</div>";
+"</div>");
+
+newResult.hover(function () {
+  //make it darker
+$(this).css("background-color", "lightgray");
+  }, function () {
+      //reverse
+$(this).css("background-color", "transparent");
+ });
 resultList.append(newResult);
-});
+
+});}
 
 
 
@@ -225,3 +306,21 @@ if(aNumber == 10) {
  testme(); */
 
 });
+  
+
+
+
+/*Workit..
+$("#githubsearchform").on("submit",function() {
+   
+    if(searchPhrase){
+
+    var githubsearch="http://api.github.com/search/repositories?q=jquery+language:javascript&sort=stars";
+
+    $.get(githubsearch,function(r){
+        //console.log(r.items.length)
+    displayResults(r.items);
+    });
+  
+    return false;  
+});*/

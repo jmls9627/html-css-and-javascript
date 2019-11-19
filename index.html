@@ -29,13 +29,14 @@
      <p>In this <em>sample site</em>we'll show a list of <a href="http://github.com">GitHub</a>
         projects and data about <strong>those projects</strong>.</p>
    
-   <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form">
+   <form action="http://wilder.azurewebsites.net/echo" method="POST" 
+   class="bordered-image simple-form" id="githubsearchform">
     <label for="searchPhrase">Search Phrase:</label> 
-    <input name="searchPhrase" id="searchPhrase"/> 
+    <input name="searchPhrase" id="searchPhrase"/> <br>
      
      
-     <input type="checkbox" name="userStars" id="userStars" checked="true"/>
-     <label for="userStars">Use Stars?</label>  
+     <input type="checkbox" name="userStars" id="useStars" checked="true"/>
+     <label for="useStars">Use Stars?</label> <br> 
     
     
      <label for="langChoice">Language:</label> 
@@ -47,7 +48,8 @@
        <option value="java">Java</option>
        <option value="Ruby">Ruby</option>
     </select><br><br>
-    <input type="submit" value="search"> 
+    <input type="submit"  value="search"> 
+    
 </form>
 
 <!--<button onclick="test0()">test0</button>
@@ -56,8 +58,8 @@
 <button onclick="test3()">test3</button>-->
 
 <div id="results" class="bordered-image">            
-<button id="toggleButton" onclick="Hide()">Hide</button>
-   <div  id="resultList">javascript</div>
+<button id="toggleButton">Hide</button>
+ <div  id="resultList"  >javascript</div>
 </div>   
 
 </section>
