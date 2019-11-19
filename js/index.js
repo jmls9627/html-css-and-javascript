@@ -118,36 +118,6 @@ $("#githubsearchform").on("submit",function() {
 });
 
 /*
-$("#githubsearchform").on("submit",function() {
-    var searchPhrase=$("#searchPhrase").val();
-    var useStars=$("#useStars").val();
-    var langChoice=$("#langChoice").val();
-
-if(searchPhrase){
-
-    resultList.text("performing prhase...")
-
-    var githubsearch="http://api.github.com/search/repositories?q=" + searchPhrase;
-
-    if(langChoice!="All"){
-      githubsearch += "+language:" + langChoice;
-}
-    if(useStars){
-      githubsearch += "&sort=stars" + langChoice;
-} 
-
-var githubsearch="http://api.github.com/search/repositories?q=jquery+language:javascript&sort=stars";
-
-$.get(githubsearch,function(r){
-    //console.log(r.items.length)
-displayResults(r.items);
-});
-}
-return false;
-
-});
-*/
-/*
 $.get(githubsearch)
 .success(function(r){
     //console.log(r.items.length)
@@ -307,9 +277,6 @@ if(aNumber == 10) {
 
 });
   
-
-
-
 /*Workit..
 $("#githubsearchform").on("submit",function() {
    
